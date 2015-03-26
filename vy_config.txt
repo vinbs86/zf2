@@ -1,0 +1,44 @@
+C:\Windows\System32\drivers\etc\hosts
+
+127.0.0.1 rainday.dev
+_______________________________
+
+<VirtualHost *:80>
+     ServerName codingvn.dev
+     DocumentRoot C:\xampp\htdocs\vy\codingvn.com\public
+     SetEnv APPLICATION_ENV "development"
+     SetEnv ZF2_PATH "C:\xampp\htdocs\vy\codingvn.com\vendor\ZF2"
+     <Directory C:\xampp\htdocs\vy\codingvn.com\public>
+         DirectoryIndex index.php
+         AllowOverride All
+         Order allow,deny
+         Allow from all
+     </Directory>
+ </VirtualHost>
+
+<VirtualHost *:80>
+     ServerName zf.dev
+     DocumentRoot C:\xampp\htdocs\vy\zf2-tutorial\public
+     SetEnv APPLICATION_ENV "development"
+     SetEnv ZF2_PATH "C:\xampp\htdocs\vy\zf2-tutorial\vendor\ZF2"
+     <Directory /path/to/zf2-tutorial/public>
+         DirectoryIndex index.php
+         AllowOverride All
+         Order allow,deny
+         Allow from all
+     </Directory>
+ </VirtualHost>
+
+ <VirtualHost *:80>
+     ServerName rainday.dev
+     DocumentRoot C:\xampp\htdocs\vy\zf2\public
+     SetEnv APPLICATION_ENV "development"
+     SetEnv ZF2_PATH C:\xampp\htdocs\vy\zf2\vendor\ZF2\ZendFramework-2.3.7\library
+     <Directory C:\xampp\htdocs\vy\zf2\public>
+         DirectoryIndex index.php
+         AllowOverride All
+         Order allow,deny
+         Allow from all
+     </Directory>
+ </VirtualHost>
+_______________________________________________
